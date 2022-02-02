@@ -11,10 +11,8 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import { Input } from '@mui/material';
+import { Input, Button, Avatar } from '@mui/material';
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = ["Products", "Pricing", "Blog"];
@@ -41,12 +39,11 @@ function HomePage() {
     <div>
        {/* <ResponsiveAppBar></ResponsiveAppBar> */}
 
-      <Link href="/chat">Chat!</Link>
       <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-      <PageTitle tag="h2">Welcome!</PageTitle>
+      <PageTitle tag="h2" children="div">Welcome!</PageTitle>
       <h2>Discord - Lumen</h2>
-      <Input color="warning">Enter your name</Input>
-      <Button></Button>
+      <Input color="warning">Enter your name</Input><br></br>
+      <Link href="/chat"><Button variant="outlined" color="warning">Chat</Button></Link>
     </div>
   );
 }
