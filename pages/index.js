@@ -14,44 +14,14 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
+import { Input } from '@mui/material';
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-function GlobalStyle() {
-  return (
-    <style global jsx>{`
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-      }
-      body {
-        font-family: "Open Sans", sans-serif;
-      }
-      /* App fit Height */
-      html,
-      body,
-      #__next {
-        min-height: 100vh;
-        display: flex;
-        flex: 1;
-      }
-      #__next {
-        flex: 1;
-      }
-      #__next > * {
-        flex: 1;
-      }
-      /* ./App fit Height */
-    `}</style>
-  );
-}
 
 function PageTitle(props) {
-  console.log(props);
   const Tag = props.tag;
   return (
     <>
@@ -69,18 +39,13 @@ function PageTitle(props) {
 function HomePage() {
   return (
     <div>
-      <ResponsiveAppBar></ResponsiveAppBar>
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={["top100Films"]}
-        sx={{ width: 300 }}
-        renderInput={(params) => <TextField label="Movie" />}
-      />
-      <Link href="/fac">Chat!</Link>
+       {/* <ResponsiveAppBar></ResponsiveAppBar> */}
+
+      <Link href="/chat">Chat!</Link>
       <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
       <PageTitle tag="h2">Welcome!</PageTitle>
-      <h2>Discord - Alura Matrix</h2>
+      <h2>Discord - Lumen</h2>
+      <Input color="warning">Enter your name</Input>
       <Button></Button>
     </div>
   );

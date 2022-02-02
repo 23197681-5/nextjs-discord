@@ -4,7 +4,7 @@ export default function ChatPage() {
     <div>
       Chat Page
       <Link href="/">
-        <a>Sair </a>
+        <a>Logout </a>
       </Link>
     </div>
   );
